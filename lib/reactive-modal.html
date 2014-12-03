@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body {{modalBodyClass}}">
           <!-- strange: {{> template}} works fine, but with the data context, template is searched inside the data context (the second variable) -->
-          {{> ../template doc}}
+          {{> Template.dynamic template=template data=doc}}
         </div>
         <div class="modal-footer {{modalFooterClass}}">
           {{#each arrayify buttons}}
